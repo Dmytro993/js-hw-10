@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Dmytro993/webpack_bundle/issues"
   },
-  "homepage": "https://github.com/Dmytro993/webpack_bundle#readme",
+  "homepage": "https://dmytro993.github.io/js-hw-10/",
   "dependencies": {
     "gh-pages": "^3.1.0",
     "webpack": "^4.44.1",
