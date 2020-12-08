@@ -13,28 +13,36 @@ ul.insertAdjacentHTML("beforeend", hbs(menu))
 
 myButton.addEventListener("change", e =>{
    if(e.target.checked){
-      body.classList.remove("light-theme")
-      body.classList.add("dark-theme")
-      localStorage.setItem("my-theme", "dark")
+      removeClass("light-theme")
+      addClass("dark-theme")
+      setMyItem("my-theme", "dark")
    }
    if(!e.target.checked){
-      body.classList.remove("dark-theme")
-      body.classList.add("light-theme")
-      localStorage.setItem("my-theme", "light")
+      removeClass("dark-theme")
+      addClass("light-theme")
+      setMyItem("my-theme", "light")
    }
 })
  
 function localStore(){
     const theme = localStorage.getItem("my-theme")
     if(theme === "dark"){
-        body.classList.add("dark-theme")
+        addClass("dark-theme")
         myButton.checked = true;
     }
     if(theme === "light"){
-        body.classList.add("light-theme")
+        addClass("light-theme")
         myButton.checked = false;
     }
 }
-localStore()
+ localStore()
 
-
+function addClass( myClass){
+return body.classList.add(myClass)
+}
+function removeClass(reClass){
+return body.classList.remove(reClass)
+}
+function setMyItem (key , value){
+return localStorage.setItem(key, value)
+}
