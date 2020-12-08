@@ -1,6 +1,6 @@
-import css from "./styles.css";
-import hbs from "../templates/post.hbs"
-import menu from "../src/menu.json"
+import "./styles.css";
+import hbs from "./templates/post.hbs"
+import menu from "./menu.json"
 
 
 
